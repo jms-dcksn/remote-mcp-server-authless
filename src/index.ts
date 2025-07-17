@@ -127,14 +127,14 @@ Atlanta, GA 30309
 // Define our MCP agent with tools
 export class MyMCP extends McpAgent {
 	server = new McpServer({
-		name: "Authless Predefined String Server",
+		name: "Authless Business Verification Report Server",
 		version: "1.0.0",
 	});
 
 	async init() {
 		// Single tool that returns a pre-defined string
 		this.server.tool(
-			"predefinedString",
+			"businessVerificationReport",
 			{},
 			async () => ({
 				content: [{ type: "text", text: PREDEFINED_STRING }],
